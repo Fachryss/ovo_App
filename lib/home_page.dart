@@ -66,10 +66,18 @@ class _HomePageState extends State<HomePage> {
                 // Kotak dengan OVO Balance di atas dan Transfer, Pay, Top Up di bawah
                 Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/bg.jpg'),
-                          fit: BoxFit.cover)),
+                    borderRadius: BorderRadius.circular(10),
+                    // Menggunakan gradien untuk transisi warna
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.purple.shade800, // Warna awal (Ovo Cash)
+                        Colors.purple.shade600, // Warna tengah
+                        Colors.purple.shade400, // Warna akhir (64 Pin)
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
                   padding: EdgeInsets.all(15),
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.fromLTRB(0, 20, 0, 20),
